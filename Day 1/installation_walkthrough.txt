@@ -1,0 +1,41 @@
+BASIC INSTALLATION
+- https://www.anaconda.com/download/success -- Download for your operating system.
+	- skip registration. It is not needed.
+- follow the setup process. Keep all choices as default.
+- once installed, search for 'anaconda prompt' on your computer.
+
+MAKING A VENV FOR PRACTICUM MODULES
+- make a folder in a directory of your choice and name it INSPIRE. (easy choice is to make a directory on your desktop.)
+- navigate to that folder.
+- make a venv (below) and notice where the environment will be stored: "environment location: C:\Users\wular\anaconda3\envs\inspiremd"
+
+CREATE THE VIRTUAL ENVIRONMENT
+
+python3 -m venv /path/to/venv/
+conda create --name inspiremd # create the conda env (select 'y' whenever prompted, to continue the process)
+conda activate inspiremd      # activate the conda env (note that once activated the beginnig of your terminal prompt will have the env name)
+
+DOWNLOADING MODULES IN THE VENV
+# for each of these lines (one at a time!), paste them exactly into your anaconda prompt and wait until each 
+# select 'y' whenever prompted to continue the installations. this will take a few minutes for each.
+conda install -c conda-forge openmm
+conda install -c conda-f	orge mdanalysis
+conda install -c anaconda ipykernel
+
+or with pip:
+	pip install openmm
+	pip install --upgrade MDAnalysis
+	pip install ipykernel
+	
+python -m ipykernel install --user --name=inspiremd # install this venv kernel so we may use it in the jupyter notebooks
+
+# open up a local instance of jupyter
+- we will use jupyter notebook since that is a good balance between having a presentation along with the code
+- open the anaconda navigator.
+- select to launch a jupyter notebook. the notebook will appear in a web browser.
+- navigate to your inspire folder and the sub-directory containing Eugene's lecture
+- open the jupyter notebook that contains the lecture
+- make sure that you've selected the inspiremd kernel for use in the notebook (kernal tab --> change kernel --> select inspiremd)
+
+# download chimerax for visualization
+- navigate to, and download, ChimeraX (https://www.rbvi.ucsf.edu/chimerax/download.html) for molecular visualization.
