@@ -1,4 +1,4 @@
-# INSPIRE_2025
+# INSPIRE 2025
 INSPIRE program @ UTM, 2025
 
 ___
